@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="AllInOneSampleApp.MainPage">
+    <StackLayout Spacing="4" Padding="16">
+            <Label Text="Merchant Id" FontSize="Medium" />
+            <Entry Text="{Binding mid}" FontSize="Medium" />
+             <Label Text="Order Id" FontSize="Medium" />
+            <Entry Text="{Binding orderId}" FontSize="Medium" />
+             <Label Text="Amount" FontSize="Medium" />
+            <Entry Text="{Binding amount}" FontSize="Medium" />
+            <Label Text="Transaction Token" FontSize="Medium" />
+            <Entry Text="{Binding txnToken}" FontSize="Medium" />
+             <StackLayout Spacing="4" Orientation="Horizontal" Padding="8">
+                <CheckBox IsChecked="{Binding isStaging}" CheckedChanged="IsStagingChanged"/>
+                <Label Text="IsStaging"  FontSize="Medium"/>
+             </StackLayout>
+            <StackLayout Spacing="4" Orientation="Horizontal" Padding="8">
+                <CheckBox IsChecked="{Binding restrictAppInvoke}" CheckedChanged="AppInvokeRestrictionChanged"/>
+                <Label Text="Restrict App Invoke"  FontSize="Medium"/>
+             </StackLayout>
+            <Button IsEnabled="{Binding isApiInProgress}" Text="Start Transaction" Clicked="StartTransaction_Clicked"/>
+            <Label Text="{Binding message}" FontSize="Medium" Padding="10" />
+    </StackLayout>
+</ContentPage>
