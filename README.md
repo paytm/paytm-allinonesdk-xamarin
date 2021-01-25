@@ -7,3 +7,6 @@ Please restore the nuget package in solution option by right click on the projec
 Please remove fast assembly Deployment check from Android Build of Android.Project Option.
 
 Select Ios and Android project to run.
+
+
+* Developer Docs: https://developer.paytm.com/docs/all-in-one-sdk/hybrid-apps/xamarin/
